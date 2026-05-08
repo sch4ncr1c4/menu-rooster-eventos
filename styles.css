@@ -13,9 +13,15 @@
   padding: 0;
 }
 
+html {
+  min-height: 100%;
+  background: var(--bg);
+  color-scheme: dark;
+}
+
 body {
   min-height: 100vh;
-  background: #000;
+  background: var(--bg);
   color: var(--text);
   font-family: "Montserrat", sans-serif;
   padding: 20px 14px 36px;
@@ -153,9 +159,7 @@ body.reveal-enabled .event-title {
 }
 
 body.reveal-enabled .menu__logo {
-  animation:
-    logo-bounce-in 0.95s cubic-bezier(0.2, 0.85, 0.25, 1) both,
-    logo-quiet-loop 3.2s ease-in-out 1.05s infinite;
+  animation: logo-bounce-in 0.95s cubic-bezier(0.2, 0.85, 0.25, 1) both;
 }
 
 .menu__header h1 {
@@ -297,24 +301,6 @@ body.reveal-enabled .event-title {
   }
   100% {
     opacity: 1;
-    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
-  }
-}
-
-@keyframes logo-quiet-loop {
-  0% {
-    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
-  }
-  25% {
-    transform: translate3d(2px, -2px, 0) scale(1.012) rotate(0.8deg);
-  }
-  50% {
-    transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
-  }
-  75% {
-    transform: translate3d(-2px, 1px, 0) scale(0.992) rotate(-0.7deg);
-  }
-  100% {
     transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
   }
 }
@@ -557,11 +543,11 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
 }
 
 .category-image--cervezas {
-  object-position: center 32%;
+  object-position: center 34%;
 }
 
 .category-image--tragos {
-  object-position: center 22%;
+  object-position: center 16%;
 }
 
 .category-image--tragos-litro {
@@ -569,15 +555,15 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
 }
 
 .category-image--botellas {
-  object-position: center 26%;
+  object-position: center 16%;
 }
 
 .category-image--vinos {
-  object-position: center 34%;
+  object-position: center 30%;
 }
 
 .category-image--sin-alcohol {
-  object-position: center 30%;
+  object-position: center 22%;
 }
 
 .category-card h2 {
@@ -714,11 +700,11 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
   }
 
   .category-image--cervezas {
-    object-position: center 34%;
+    object-position: center 38%;
   }
 
   .category-image--tragos {
-    object-position: center 24%;
+    object-position: center 18%;
   }
 
   .category-image--tragos-litro {
@@ -726,15 +712,15 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
   }
 
   .category-image--botellas {
-    object-position: center 28%;
+    object-position: center 18%;
   }
 
   .category-image--vinos {
-    object-position: center 36%;
+    object-position: center 32%;
   }
 
   .category-image--sin-alcohol {
-    object-position: center 32%;
+    object-position: center 24%;
   }
 
   .category-card h2 {
