@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="party-lights" aria-hidden="true"></div>
+  <div class="party-confetti" aria-hidden="true"></div>
   <main class="menu">
     <header class="menu__header">
       <img class="menu__logo" src="images/logo.png" alt="Logo DJ's" loading="eager" decoding="async" fetchpriority="high" />
@@ -24,7 +26,7 @@
 
     <section class="categories" aria-label="Categorías del menú">
       <article class="category-card">
-        <img class="category-image category-image--cervezas" src="images/cervezas.webp" alt="Cervezas" loading="lazy" decoding="async" fetchpriority="low" />
+        <img class="category-image category-image--cervezas" src="images/cervezas.webp" data-fallback-src="images/cervezas.png" alt="Cervezas" loading="lazy" decoding="async" fetchpriority="low" />
         <h2>Cervezas</h2>
         <ul class="item-list" aria-label="Lista de cervezas">
           <li><span>Ipa Sanfer</span><strong>$7.500</strong></li>
@@ -59,7 +61,7 @@
       </article>
 
       <article class="category-card">
-        <img class="category-image category-image--tragos-litro" src="images/tragos1litro.webp" alt="Tragos 1 Litro" loading="lazy" decoding="async" fetchpriority="low" />
+        <img class="category-image category-image--tragos-litro" src="images/tragos1litro.webp" data-fallback-src="images/tragos1litro.png" alt="Tragos 1 Litro" loading="lazy" decoding="async" fetchpriority="low" />
         <h2>Tragos 1 Litro</h2>
         <ul class="item-list" aria-label="Lista de tragos 1 litro">
           <li><span>Fernet 1 Litro</span><strong>$14.500</strong></li>
@@ -70,7 +72,7 @@
       </article>
 
       <article class="category-card">
-        <img class="category-image category-image--botellas" src="images/botellas.webp" alt="Botellas" loading="lazy" decoding="async" fetchpriority="low" />
+        <img class="category-image category-image--botellas" src="images/botellas.webp" data-fallback-src="images/botellas.png" alt="Botellas" loading="lazy" decoding="async" fetchpriority="low" />
         <h2>Botellas</h2>
         <ul class="item-list" aria-label="Lista de botellas">
           <li><span>Botella Red label con 3 Speed</span><strong>$150.000</strong></li>
@@ -80,7 +82,7 @@
       </article>
 
       <article class="category-card">
-        <img class="category-image category-image--vinos" src="images/varios.webp" alt="Vinos" loading="lazy" decoding="async" fetchpriority="low" />
+        <img class="category-image category-image--vinos" src="images/varios.webp" data-fallback-src="images/varios.png" alt="Vinos" loading="lazy" decoding="async" fetchpriority="low" />
         <h2>Vinos</h2>
         <ul class="item-list" aria-label="Lista de vinos">
           <li><span>Vermu Tirado</span><strong>$5.500</strong></li>
@@ -120,40 +122,6 @@
       Designed by Cristian Schinocca
     </a>
   </footer>
-  <script>
-    (() => {
-      const cards = Array.from(document.querySelectorAll(".category-card"));
-      if (!cards.length) return;
-
-      document.body.classList.add("reveal-enabled");
-
-      const revealCard = (card) => {
-        card.classList.add("is-visible");
-      };
-
-      if (!("IntersectionObserver" in window)) {
-        cards.forEach(revealCard);
-        return;
-      }
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              revealCard(entry.target);
-              observer.unobserve(entry.target);
-            }
-          });
-        },
-        {
-          root: null,
-          threshold: 0.18,
-          rootMargin: "0px 0px -8% 0px",
-        }
-      );
-
-      cards.forEach((card) => observer.observe(card));
-    })();
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
