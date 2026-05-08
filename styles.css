@@ -303,6 +303,8 @@ body::after {
   backdrop-filter: blur(10px) saturate(1.12);
   -webkit-backdrop-filter: blur(10px) saturate(1.12);
   transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease, box-shadow 0.3s ease;
+  content-visibility: auto;
+  contain-intrinsic-size: 460px;
 }
 
 .category-card:hover {
@@ -423,6 +425,68 @@ body::after {
 .unavailable-note {
   color: #ff4b4b;
   font-weight: 700;
+}
+
+@media (max-width: 619px) {
+  body {
+    padding: 16px 12px 28px;
+  }
+
+  body::before {
+    animation-duration: 34s;
+    opacity: 0.16;
+  }
+
+  body::after {
+    animation: lights-pulse 5s ease-in-out infinite alternate;
+    filter: blur(12px) saturate(1.08);
+    opacity: 0.58;
+  }
+
+  .green-beams {
+    animation: beams-sweep 5.5s linear infinite;
+    opacity: 0.26;
+    filter: blur(1px) brightness(0.98);
+  }
+
+  .event-title .animated-text,
+  .event-title .fixed-x {
+    animation-duration: 3.2s, 1.4s, 2.2s;
+  }
+
+  .category-card {
+    backdrop-filter: blur(4px) saturate(1.05);
+    -webkit-backdrop-filter: blur(4px) saturate(1.05);
+  }
+
+  .category-card:hover {
+    transform: none;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  }
+
+  .category-image {
+    transition: none;
+  }
+
+  .category-card h2 {
+    animation-duration: 3.4s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  body::before,
+  body::after,
+  .green-beams {
+    opacity: 0.12;
+  }
 }
 
 @media (min-width: 620px) {
