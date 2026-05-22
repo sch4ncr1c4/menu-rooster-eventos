@@ -2,7 +2,13 @@
   const images = Array.from(document.querySelectorAll(".category-image"));
 
   images.forEach((img) => {
+    if (img.complete && img.naturalWidth > 0) {
+      img.classList.add("is-loaded");
+      img.classList.remove("image-placeholder");
+    }
+
     img.addEventListener("load", () => {
+      img.classList.add("is-loaded");
       img.classList.remove("image-placeholder");
     });
 
@@ -11,18 +17,6 @@
         img.dataset.retryAttempted = "true";
         const separator = img.src.includes("?") ? "&" : "?";
         img.src = `${img.currentSrc || img.src}${separator}retry=${Date.now()}`;
-        return;
-      }
-
-      if (img.dataset.fallbackUsed === "true") {
-        img.classList.add("image-placeholder");
-        return;
-      }
-
-      const fallbackSrc = img.dataset.fallbackSrc;
-      if (fallbackSrc) {
-        img.dataset.fallbackUsed = "true";
-        img.src = fallbackSrc;
         return;
       }
 
@@ -46,6 +40,8 @@
     return;
   }
 
+  const isMobile = window.matchMedia("(max-width: 619px)").matches;
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -57,8 +53,8 @@
     },
     {
       root: null,
-      threshold: 0.18,
-      rootMargin: "0px 0px -8% 0px",
+      threshold: isMobile ? 0.08 : 0.18,
+      rootMargin: isMobile ? "0px 0px -2% 0px" : "0px 0px -8% 0px",
     }
   );
 

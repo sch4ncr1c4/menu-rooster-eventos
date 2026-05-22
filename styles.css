@@ -26,7 +26,7 @@ body {
   background-color: var(--bg);
   color: var(--text);
   font-family: "Montserrat", sans-serif;
-  padding: 20px 14px 36px;
+  padding: 20px 14px 0;
   position: relative;
   overflow-x: hidden;
 }
@@ -135,6 +135,8 @@ body::after {
   color: inherit;
   text-decoration: none;
   line-height: 1.2;
+  margin-top: 10px;
+  margin-bottom: 10px;
   transition: color 0.2s ease;
 }
 
@@ -590,8 +592,8 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
 }
 
 .image-placeholder {
-  aspect-ratio: 4 / 3;
   width: 100%;
+  height: clamp(180px, 28vw, 240px);
   display: grid;
   place-items: center;
   border-bottom: 1px dashed #343434;
@@ -610,11 +612,18 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
 
 .category-image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: clamp(180px, 28vw, 240px);
   object-fit: cover;
   display: block;
+  opacity: 0.72;
+  filter: blur(5px) saturate(0.92);
   transform: scale(1);
-  transition: transform 0.35s ease;
+  transition: transform 0.55s ease, opacity 0.55s ease, filter 0.55s ease;
+}
+
+.category-image.is-loaded {
+  opacity: 1;
+  filter: blur(0) saturate(1);
 }
 
 .category-image--cervezas {
@@ -724,7 +733,7 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
 
 @media (max-width: 619px) {
   body {
-    padding: 16px 12px 28px;
+    padding: 16px 12px 0;
   }
 
   body::before {
@@ -764,15 +773,16 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
   }
 
   body.reveal-enabled .category-card {
-    transform: translate3d(0, 14px, 0);
+    transform: translate3d(0, 20px, 0) scale(0.985);
   }
 
   body.reveal-enabled .category-card.is-visible {
-    animation-duration: 0.55s;
+    animation-duration: 0.9s;
+    animation-timing-function: cubic-bezier(0.2, 0.75, 0.2, 1);
   }
 
   body.reveal-enabled .category-card.is-visible .item-list li {
-    animation-duration: 0.38s;
+    animation-duration: 0.62s;
   }
 
   .category-card:hover {
@@ -781,7 +791,7 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
   }
 
   .category-image {
-    transition: none;
+    transition: transform 0.6s ease, opacity 0.6s ease, filter 0.6s ease;
   }
 
   .category-image--cervezas {
@@ -848,7 +858,7 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
 
 @media (min-width: 620px) {
   body {
-    padding: 28px 18px 40px;
+    padding: 28px 18px 0;
   }
 
   .menu__header {
