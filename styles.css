@@ -879,6 +879,11 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
 
 /* iOS Safari: evita “doble fondo” al recargar con capas fixed */
 @supports (-webkit-touch-callout: none) {
+  html,
+  body {
+    overscroll-behavior-y: none;
+  }
+
   body::before,
   body::after,
   .party-lights,
@@ -889,6 +894,17 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
     will-change: transform, opacity;
+  }
+
+  /* En iOS, el rebote al final + blur/animaciones grandes puede generar jank */
+  body::after,
+  .party-lights,
+  .party-confetti {
+    animation: none;
+  }
+
+  body::after {
+    filter: blur(10px) saturate(1.05);
   }
 }
 

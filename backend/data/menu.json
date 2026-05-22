@@ -1,0 +1,121 @@
+{
+  "eventName": "LA PREVIA: EL REENCUENTRO by ROOSTER CRAFT BEER",
+  "products": [
+    {
+      "name": "Ipa Sanfer",
+      "price": "7500"
+    },
+    {
+      "name": "Apa Sorachi",
+      "price": "7000"
+    },
+    {
+      "name": "Blonde",
+      "price": "6500"
+    },
+    {
+      "name": "Honey",
+      "price": "7500"
+    },
+    {
+      "name": "Irish",
+      "price": "7000"
+    },
+    {
+      "name": "Jim Morrison",
+      "price": "7500"
+    },
+    {
+      "name": "Gin tonic",
+      "price": "8000"
+    },
+    {
+      "name": "Fernet",
+      "price": "7500"
+    },
+    {
+      "name": "Cubra libre",
+      "price": "7500"
+    },
+    {
+      "name": "Campari",
+      "price": "8300"
+    },
+    {
+      "name": "Gancia",
+      "price": "7000"
+    },
+    {
+      "name": "Jagger con Speed",
+      "price": "17000"
+    },
+    {
+      "name": "Vodka Con Speed/Jugo",
+      "price": "8900"
+    },
+    {
+      "name": "Cynar",
+      "price": "8500"
+    },
+    {
+      "name": "Medida Whisky Red Label",
+      "price": "8500"
+    },
+    {
+      "name": "Fernet 1 Litro",
+      "price": "14500"
+    },
+    {
+      "name": "Campari 1 Litro",
+      "price": "15000"
+    },
+    {
+      "name": "Tinto de Verano 1 Litro",
+      "price": "12000"
+    },
+    {
+      "name": "Vermu Tirado 1 Litro",
+      "price": "10000"
+    },
+    {
+      "name": "Botella Red label con 3 Speed",
+      "price": "150000"
+    },
+    {
+      "name": "Botella Skyy con 3 Speed",
+      "price": "65000"
+    },
+    {
+      "name": "Champagne Mumm Extra Brut + 3 speed",
+      "price": "55000"
+    },
+    {
+      "name": "Vermu Tirado",
+      "price": "5500"
+    },
+    {
+      "name": "Tinto Verano",
+      "price": "6800"
+    },
+    {
+      "name": "Chardonay",
+      "price": "5200"
+    },
+    {
+      "name": "Agua 500cc",
+      "price": "3500"
+    },
+    {
+      "name": "Aquarius",
+      "price": "4000"
+    },
+    {
+      "name": "Gaseosas",
+      "price": "4000"
+    },
+    {
+      "name": "Speed",
+      "price": "5200"
+    }
+  ]
+}
