@@ -144,6 +144,11 @@ body::after {
   color: rgba(255, 255, 255, 0.82);
 }
 
+.designer-name {
+  color: #ffd166;
+  text-shadow: 0 0 8px rgba(255, 209, 102, 0.45);
+}
+
 .party-lights,
 .party-confetti {
   position: fixed;
@@ -593,7 +598,7 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
 
 .image-placeholder {
   width: 100%;
-  height: clamp(180px, 28vw, 240px);
+  height: clamp(210px, 30vw, 280px);
   display: grid;
   place-items: center;
   border-bottom: 1px dashed #343434;
@@ -612,7 +617,7 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
 
 .category-image {
   width: 100%;
-  height: clamp(180px, 28vw, 240px);
+  height: clamp(210px, 30vw, 280px);
   object-fit: cover;
   display: block;
   opacity: 0.72;
@@ -791,7 +796,12 @@ body.reveal-enabled .category-card.is-visible .item-list li:nth-child(9) {
   }
 
   .category-image {
+    height: clamp(230px, 36vw, 300px);
     transition: transform 0.6s ease, opacity 0.6s ease, filter 0.6s ease;
+  }
+
+  .image-placeholder {
+    height: clamp(230px, 36vw, 300px);
   }
 
   .category-image--cervezas {
