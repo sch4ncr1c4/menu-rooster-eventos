@@ -1,0 +1,169 @@
+body:not(.page-ready) {
+  overflow: hidden;
+}
+
+body:not(.page-ready) .menu,
+body:not(.page-ready) .site-footer,
+body:not(.page-ready) .party-lights,
+body:not(.page-ready) .party-confetti,
+body:not(.page-ready) .green-beams,
+body:not(.page-ready) .vignette-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.page-ready .menu,
+body.page-ready .site-footer,
+body.page-ready .party-lights,
+body.page-ready .party-confetti,
+body.page-ready .green-beams,
+body.page-ready .vignette-overlay {
+  opacity: 1;
+  transition: opacity 0.45s ease;
+}
+
+.site-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: var(--bg);
+  overflow: hidden;
+  transition: opacity 0.45s ease, visibility 0.45s ease;
+}
+
+.site-loader::before,
+.site-loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.site-loader::before {
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 80, 0, 0.22), transparent 18%),
+    radial-gradient(circle at 82% 16%, rgba(0, 220, 255, 0.2), transparent 20%),
+    radial-gradient(circle at 50% 0%, rgba(255, 208, 0, 0.14), transparent 24%),
+    radial-gradient(circle at 50% 80%, rgba(255, 0, 180, 0.08), transparent 26%);
+  opacity: 1;
+  z-index: 0;
+}
+
+.site-loader::after {
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.52)),
+    radial-gradient(circle at 18% 0%, rgba(255, 122, 0, 0.24), transparent 20%),
+    radial-gradient(circle at 84% 0%, rgba(0, 231, 255, 0.22), transparent 20%),
+    radial-gradient(circle at 52% 0%, rgba(255, 61, 127, 0.16), transparent 22%),
+    linear-gradient(115deg, transparent 36%, rgba(255, 255, 255, 0.08) 50%, transparent 64%),
+    linear-gradient(65deg, transparent 38%, rgba(255, 255, 255, 0.06) 50%, transparent 62%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 240% 240%, 220% 220%;
+  background-position: 0 0, 14% 0, 86% 0, 50% 0, 0% 40%, 100% 60%;
+  filter: blur(17px) saturate(1.18);
+  opacity: 0.88;
+  z-index: 0;
+}
+
+body.page-ready .site-loader {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.site-loader__inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.site-loader__logo {
+  width: clamp(140px, 30vw, 240px);
+  height: auto;
+  filter:
+    drop-shadow(0 0 24px rgba(116, 201, 255, 0.26))
+    drop-shadow(0 0 28px rgba(246, 211, 107, 0.18));
+  opacity: 0;
+  transform: translateY(14px) scale(0.92);
+  animation: loader-logo-in 0.35s cubic-bezier(0.22, 0.61, 0.36, 1) 0.05s forwards;
+}
+
+.site-loader__stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: -8px;
+}
+
+.site-loader__stars span {
+  display: inline-block;
+  font-size: clamp(1.9rem, 4.8vw, 3rem);
+  line-height: 1;
+  color: #f6d36b;
+  text-shadow:
+    0 0 10px rgba(246, 211, 107, 0.65),
+    0 0 20px rgba(116, 201, 255, 0.2);
+  opacity: 0;
+  transform: translateY(12px) scale(0.7);
+}
+
+.site-loader__stars span:nth-child(1) {
+  transform: translateY(12px) rotate(-12deg) scale(0.7);
+}
+
+.site-loader__stars span:nth-child(2) {
+  transform: translateY(-4px) scale(0.82);
+}
+
+.site-loader__stars span:nth-child(3) {
+  transform: translateY(12px) rotate(12deg) scale(0.7);
+}
+
+.site-loader__stars span:nth-child(1) {
+  animation: loader-star-in 0.3s ease-out 0.52s forwards;
+}
+
+.site-loader__stars span:nth-child(2) {
+  animation: loader-star-in 0.3s ease-out 0.72s forwards;
+}
+
+.site-loader__stars span:nth-child(3) {
+  animation: loader-star-in 0.3s ease-out 0.92s forwards;
+}
+
+@keyframes loader-logo-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes loader-star-in {
+  0% {
+    opacity: 0;
+    filter: brightness(0.9);
+  }
+  70% {
+    opacity: 1;
+    filter: brightness(1.15);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-loader {
+    display: none;
+  }
+}

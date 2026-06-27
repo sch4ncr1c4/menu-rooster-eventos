@@ -1,4 +1,19 @@
 (() => {
+  const showPage = () => {
+    document.body.classList.add("page-ready");
+  };
+
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    showPage();
+    return;
+  }
+
+  window.addEventListener("load", () => {
+    window.setTimeout(showPage, 1500);
+  });
+})();
+
+(() => {
   const images = Array.from(document.querySelectorAll(".category-image"));
 
   images.forEach((img) => {

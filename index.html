@@ -4,23 +4,44 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carta Tragos - Rooster Craft Beer</title>
-  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="icon" type="image/png" href="images/logo-mundial.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Oswald:wght@400;500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="loader.css" />
 </head>
 <body>
+  <div class="site-loader" aria-hidden="true">
+    <div class="site-loader__inner">
+      <div class="site-loader__stars">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+      </div>
+      <img class="site-loader__logo" src="images/logo-mundial.png" alt="" loading="eager" decoding="async" />
+    </div>
+  </div>
   <div class="party-lights" aria-hidden="true"></div>
   <div class="party-confetti" aria-hidden="true"></div>
   <main class="menu">
     <header class="menu__header">
-      <img class="menu__logo" src="images/logo.png" alt="Logo DJ's" loading="eager" decoding="async" fetchpriority="high" width="2406" height="2385" />
+      <div class="logo-stars" aria-hidden="true">
+        <span>★</span>
+        <span>★</span>
+        <span>★</span>
+      </div>
+      <img class="menu__logo" src="images/logo-mundial.png" alt="Logo DJ's" loading="eager" decoding="async" fetchpriority="high" width="2406" height="2385" />
       <h1>Menú</h1>
       <p class="event-title">
         <span class="animated-text event-title--primary">VIBRANCE MUSIC</span>
         <span class="fixed-x">by</span>
-        <span class="animated-text">ROOSTER CRAFT BEER</span>
+        <span class="event-title-rooster">
+          <span class="animated-text">ROOSTER CRAFT BEER</span>
+          <span class="world-cup" aria-hidden="true">
+            <img src="images/copa.png" alt="" loading="eager" decoding="async" />
+          </span>
+        </span>
       </p>
     </header>
 
