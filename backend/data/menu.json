@@ -3,7 +3,7 @@
   "products": [
     {
       "name": "Ipa Sanfer",
-      "price": "7500"
+      "price": "10000"
     },
     {
       "name": "Apa Sorachi",
@@ -11,75 +11,79 @@
     },
     {
       "name": "Blonde",
-      "price": "6500"
-    },
-    {
-      "name": "Honey",
-      "price": "7500"
-    },
-    {
-      "name": "Irish",
-      "price": "7000"
-    },
-    {
-      "name": "Jim Morrison",
-      "price": "7500"
-    },
-    {
-      "name": "Gin tonic",
       "price": "8000"
     },
     {
-      "name": "Fernet",
-      "price": "7500"
+      "name": "Honey",
+      "price": "10000"
     },
     {
-      "name": "Cubra libre",
-      "price": "7500"
+      "name": "Irish",
+      "price": "8000"
+    },
+    {
+      "name": "Jim Morrison",
+      "price": "10000"
+    },
+    {
+      "name": "Gin tonic",
+      "price": "9500"
+    },
+    {
+      "name": "Fernet",
+      "price": "9500"
+    },
+    {
+      "name": "Cuba libre",
+      "price": "9000"
     },
     {
       "name": "Campari",
-      "price": "8300"
+      "price": "10000"
     },
     {
       "name": "Gancia",
-      "price": "7000"
+      "price": "8000"
     },
     {
       "name": "Jagger con Speed",
-      "price": "17000"
+      "price": "20000"
     },
     {
       "name": "Vodka Con Speed/Jugo",
-      "price": "8900"
-    },
-    {
-      "name": "Cynar",
-      "price": "8500"
-    },
-    {
-      "name": "Medida Whisky Red Label",
-      "price": "8500"
-    },
-    {
-      "name": "Fernet 1 Litro",
-      "price": "14500"
-    },
-    {
-      "name": "Campari 1 Litro",
-      "price": "15000"
-    },
-    {
-      "name": "Tinto de Verano 1 Litro",
       "price": "12000"
     },
     {
-      "name": "Vermu Tirado 1 Litro",
+      "name": "Cynar",
+      "price": "9000"
+    },
+    {
+      "name": "Medida Whisky Red Label",
       "price": "10000"
+    },
+    {
+      "name": "Fernet 1 Litro",
+      "price": "18000"
+    },
+    {
+      "name": "Campari 1 Litro",
+      "price": "18000"
+    },
+    {
+      "name": "Tinto de Verano 1 Litro",
+      "price": "16000"
+    },
+    {
+      "name": "Vermu Tirado 1 Litro",
+      "price": "16000"
     },
     {
       "name": "Botella Red label con 3 Speed",
       "price": "150000"
+    },
+    {
+      "name": "Botella Jagger con 3 Speed",
+      "price": "125000"
     },
     {
       "name": "Botella Skyy con 3 Speed",
@@ -87,35 +91,39 @@
     },
     {
       "name": "Champagne Mumm Extra Brut + 3 speed",
-      "price": "55000"
+      "price": "60000"
     },
     {
       "name": "Vermu Tirado",
-      "price": "5500"
+      "price": "7000"
     },
     {
       "name": "Tinto Verano",
-      "price": "6800"
+      "price": "7000"
     },
     {
       "name": "Chardonay",
-      "price": "5200"
+      "price": "6000"
+    },
+    {
+      "name": "Malbec",
+      "price": "6000"
     },
     {
       "name": "Agua 500cc",
-      "price": "3500"
+      "price": "6000"
     },
     {
       "name": "Aquarius",
-      "price": "4000"
+      "price": "6000"
     },
     {
       "name": "Gaseosas",
-      "price": "4000"
+      "price": "8000"
     },
     {
       "name": "Speed",
-      "price": "5200"
+      "price": "5000"
     }
   ]
 }
